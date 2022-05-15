@@ -1,16 +1,16 @@
 import './App.css';
-import AddCars from './component/addCars';
-import ListCars from './component/listCars';
-import Banner from './component/banner';
+import CarRoutes from './carRoutes';
+import {
+  BrowserRouter as Router,
+} from "react-router-dom";
 import Navbar from './component/navbar';
 
 function App() {
   return (
-    <div className="App">
+    <Router>
       <Navbar />
-      <Banner />
-      <ListCars />
-    </div>
+      <CarRoutes />
+    </Router>
   );
 }
 
