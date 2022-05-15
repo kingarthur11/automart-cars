@@ -7,7 +7,7 @@ function ListCars() {
     const [APIData, setAPIData] = useState([]);
 
     const getData = () => {
-        axios.get(`http://localhost:7000/api/car/getall`)
+        axios.get(`https://auto-mart-cars.herokuapp.com/api/car/getall`)
             .then((response) => {
                 setAPIData(response.data);
             })
@@ -18,7 +18,7 @@ function ListCars() {
     }, [])
 
     const onDelete = (_id) => {
-            axios.delete(`http://localhost:7000/api/car/delete/${_id}`)
+            axios.delete(`https://auto-mart-cars.herokuapp.com/api/car/delete/${_id}`)
         .then(() => {
             getData();
         })

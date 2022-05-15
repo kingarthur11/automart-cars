@@ -17,7 +17,7 @@ function AddCars() {
 
   const postData = (event) => {
     event.preventDefault();
-    axios.post(`http://localhost:7000/api/car/create`, data).then((getData) => {
+    axios.post(`https://auto-mart-cars.herokuapp.com/api/car/create`, data).then((getData) => {
       setId(getData.data.car._id);
     });
   };
@@ -28,7 +28,7 @@ function AddCars() {
       formData.append("image", image[0]);
       console.log({ image, formData: formData.values() });
       axios
-        .put(`http://localhost:7000/api/car/upload_car_image/${id}`, formData, {
+        .put(`https://auto-mart-cars.herokuapp.com/api/car/upload_car_image/${id}`, formData, {
           headers: { "Content-Type": "multipart/form-data" },
         })
         .then((getData) => {
