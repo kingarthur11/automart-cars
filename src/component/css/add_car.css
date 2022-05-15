@@ -1,0 +1,38 @@
+label,
+.form-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #344767; }
+
+.add_car_bg {
+  background: #ede7e3;
+}
+figure {
+  background: #000;
+  overflow: hidden;
+  height: 240px;
+  position: relative;
+  border-radius: 4px 4px 0 0;
+  margin: 0;
+}
+.image_content_text h4 {
+  font-family: 'Carmen Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.317552px;
+  color: #000000;
+  padding-top: 0.7rem; 
+}
+.image_content_money {
+  font-size: 18px;
+  font-family: 'Carmen Sans';
+  font-style: normal;
+  padding-bottom: 3rem;
+}
+.fa-trash-alt {
+ cursor: pointer;
+}
