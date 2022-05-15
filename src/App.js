@@ -1,5 +1,6 @@
 import './App.css';
 import AddCars from './component/addCars';
+import ListCars from './component/listCars';
 import Banner from './component/banner';
 import Navbar from './component/navbar';
 
@@ -8,7 +9,7 @@ function App() {
     <div className="App">
       <Navbar />
       <Banner />
-      <AddCars />
+      <ListCars />
     </div>
   );
 }
