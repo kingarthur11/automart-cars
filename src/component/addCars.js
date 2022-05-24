@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./css/add_car.css";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
 
 function AddCars() {
+  const navigate = useNavigate();
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [amount, setAmount] = useState("");
@@ -26,13 +29,12 @@ function AddCars() {
     if (id) {
       let formData = new FormData();
       formData.append("image", image[0]);
-      console.log({ image, formData: formData.values() });
       axios
         .put(`https://auto-mart-cars.herokuapp.com/api/car/upload_car_image/${id}`, formData, {
           headers: { "Content-Type": "multipart/form-data" },
         })
-        .then((getData) => {
-          console.log(getData);
+        .then(() => {
+          navigate('/');
         });
     }
   }, [id, image]);
